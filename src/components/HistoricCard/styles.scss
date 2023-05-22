@@ -1,0 +1,33 @@
+.historic-card-container {
+  background-color: #302F3D;
+  width: 28.5%;
+  padding: 1.875rem 1.25rem 1.875rem 1.25rem;
+  border-radius: 1.25rem;
+  margin-top: 2.5rem;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+
+  .historic-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .historic-infos-container {
+    margin: 1.25rem 0 0 2.5rem;
+    
+    .historic-card-localization {
+      font-size: 0.875rem;
+      font-weight: 700;
+      margin-left: -1.3rem;
+    }
+    
+    .historic-card-time {
+      font-weight: 200;
+      font-size: 0.75rem;
+    }
+    
+    .historic-card-role {
+      font-weight: 400;
+      font-size: 0.75rem;
+    }  
+  }
+}

@@ -1,0 +1,22 @@
+.myprojects-container {
+  width: 100%;
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #302F3D;
+  padding: 1.875rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+
+  b {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 0.875rem;
+    font-weight: 400;
+    cursor: pointer;
+  }
+}

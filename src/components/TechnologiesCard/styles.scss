@@ -1,0 +1,36 @@
+.technologies-card-container {
+  background-color: #302F3D;
+  width: 28.5%;
+  padding: 1.875rem;
+  border-radius: 1.5rem;
+  margin-top: 2.5rem;
+  
+  .technologies-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .technologies-card-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .5rem;
+    margin-top: 1.25rem
+  }
+
+  .technology-container {
+    background-color: #CB92B1;
+    width: 5.375rem;
+    height: 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .2rem;
+
+    .technology-name {
+      color: #000;
+      font-size: 0.625rem;
+      text-transform: uppercase;
+    }
+  }
+}
