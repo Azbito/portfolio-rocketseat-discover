@@ -1,6 +1,6 @@
-.myprojects-container {
+.recentposts-container {
   width: 100%;
-  // margin-top: .5rem;
+  margin-top: .5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -8,15 +8,10 @@
   padding: 1.875rem;
   border-radius: 1.25rem;
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+  margin-top: 2rem;
 
   b {
     font-size: 1.25rem;
     font-weight: 700;
-  }
-
-  h1 {
-    font-size: 0.875rem;
-    font-weight: 400;
-    cursor: pointer;
   }
 }
