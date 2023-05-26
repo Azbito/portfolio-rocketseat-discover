@@ -19,10 +19,26 @@ import { Repository, RepositoryProps } from "./components/Repository";
 import { useEffect, useState } from "react";
 import { getRepositories } from "./services/repositoriesAPI";
 import { RecentPosts } from "./components/RecentPosts";
+import { RecentRepository } from "./components/RecentRepository";
+import axios from "axios";
+
+interface userProps {
+  avatar_url?: string | undefined,
+  login?: string | undefined,
+  repositoryName?: string | undefined
+}
 
 export function App() {
 
   const [repositories, setRepositories] = useState<RepositoryProps[]>([])
+  const [userInfos, setUserInfos] = useState<userProps[]>([])
+
+  async function getUserInfos() {
+    const { data } = await axios.get(
+      'https://api.github.com/users/marcosdanielr'
+    )
+    setUserInfos(data)
+  }
 
   const getRandomIndex = (currentGroupIndex: number, lastIndex?: number): number => {
     const filteredRepositories = repositories.filter((_, index) => index !== lastIndex);
@@ -35,9 +51,9 @@ export function App() {
 
   useEffect(() => {
     getRepositories(setRepositories)
+    getUserInfos()
   }, [])
 
-  console.log(repositories)
   return (
     <ContainerColumn>
       <ContainerRow>
@@ -48,7 +64,6 @@ export function App() {
             <Repository name={repositories[getRandomIndex(0)]?.name} description={repositories[getRandomIndex(0)]?.description} branches_url={repositories[getRandomIndex(0)]?.branches_url} language={repositories[getRandomIndex(0)]?.language} stargazers_count={repositories[getRandomIndex(0)]?.stargazers_count} />
             <Repository name={repositories[getRandomIndex(1)]?.name} description={repositories[getRandomIndex(1)]?.description} branches_url={repositories[getRandomIndex(1)]?.branches_url} language={repositories[getRandomIndex(1)]?.language} stargazers_count={repositories[getRandomIndex(1)]?.stargazers_count} />
           </ContainerRow>
-          <RecentPosts />
         </ContainerColumn>
       </ContainerRow>
       <InfosCard />

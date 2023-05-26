@@ -1,0 +1,18 @@
+.recent-repository-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  margin-top: 30rem;
+  width: 63%;
+  height: 12.56rem;
+  background-color: #302F3D;
+
+  .image-container {
+    margin-left: 2rem;
+    
+    img {
+      width: 8rem;
+      border-radius: 100px;
+    }
+  }
+}
